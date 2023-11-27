@@ -10,7 +10,7 @@ const Footer = () => {
     const emailInfo = { email };
   
     try {
-      const response = await fetch('http://localhost:5000/subemail', {
+      const response = await fetch('https://brta-server.vercel.app/subemail', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',

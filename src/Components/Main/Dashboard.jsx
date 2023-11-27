@@ -5,13 +5,13 @@ const Dashboard = () => {
   const [subemailLength, setSubemailLength] = useState(null);
   useEffect(() => {
     // Fetch the length of the "applicant" collection
-    fetch('http://localhost:5000/applicantLength')
+    fetch('https://brta-server.vercel.app/applicantLength')
       .then(response => response.json())
       .then(data => setApplicantLength(data.length))
       .catch(error => console.error('Error fetching applicant length:', error));
 
     // Fetch the length of the "subemail" collection
-    fetch('http://localhost:5000/subemailLength')
+    fetch('https://brta-server.vercel.app/subemailLength')
       .then(response => response.json())
       .then(data => setSubemailLength(data.length))
       .catch(error => console.error('Error fetching subemail length:', error));

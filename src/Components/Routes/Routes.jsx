@@ -43,7 +43,7 @@ const router=createBrowserRouter([
      {
        path: 'viewdetail/:id',
        element:<ViewDetails></ViewDetails>  ,
-       loader:({params})=> fetch(`http://localhost:5000/detail/${params.id}`)
+       loader:({params})=> fetch(`https://brta-server.vercel.app/detail/${params.id}`)
      },
       {
         path:'dashboard',

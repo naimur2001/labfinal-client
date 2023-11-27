@@ -31,7 +31,7 @@ const handleSubmit=(event)=>{
   .then(result=>{
     result;
     const formInfo={name,email,nid,presentAddress,permanentAddress,photo,chess,vehicle,currentDate,role}
-    fetch('http://localhost:5000/applicants',{
+    fetch('https://brta-server.vercel.app/applicants',{
   method:"POST",
   headers: {
     'content-type' : 'application/json'

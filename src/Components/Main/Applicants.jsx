@@ -8,7 +8,7 @@ const Applicants = () => {
 const {user}=useContext(AuthContext)
     useEffect(() => {
       
-        fetch(`http://localhost:5000/applicants`)
+        fetch(`https://brta-server.vercel.app/applicants`)
           .then(res => res.json())
           .then(data => setData(data))
           .catch(error => {
@@ -20,7 +20,7 @@ const {user}=useContext(AuthContext)
 
     useEffect(() => {
       if (user && user.email) {
-        fetch(`http://localhost:5000/applicants/${user?.email}`)
+        fetch(`https://brta-server.vercel.app/applicants/${user?.email}`)
           .then(res => res.json())
           .then(data => setUData(data))
           .catch(error => {

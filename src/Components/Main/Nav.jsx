@@ -11,7 +11,7 @@ const [data,setData]=useState('')
 
 useEffect(() => {
   if (user && user.email) {
-    fetch(`http://localhost:5000/applicants/${user?.email}`)
+    fetch(`https://brta-server.vercel.app/applicants/${user?.email}`)
       .then(res => res.json())
       .then(data => setData(data))
       .catch(error => {

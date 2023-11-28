@@ -60,16 +60,27 @@ const Section1 = () => {
 
   return (
     <div className='my-5'>
-      
-       <Swiper
- 
-       slidesPerView={3} // Set to 3 slides per view
-       spaceBetween={20} // Adjust spacing between slides
-       className='mySwiper rounded-lg'
-      >
-       {
-        sliderData.map(slide=>(
-          <SwiperSlide key={slide.id} className="bg-purple-50 h-[200px] p-4 rounded-md shadow-lg mx-5">
+    <Swiper
+     breakpoints={{
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      620: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+    }}
+    freeMode={true}     
+      spaceBetween={20}      // Adjust spacing between slides
+      className='mySwiper rounded-lg'
+    >
+      {sliderData.map((slide) => (
+        <SwiperSlide key={slide.id} className="bg-purple-100 lg:w-0 w-full sm:w-96 h-96 p-4 rounded-md shadow-lg mx-5">
           <img src={slide.image} alt={slide.title} className="mb-4 rounded-md w-full h-48 object-cover" />
           <h2 className="text-xl font-bold mb-2">{slide.title}</h2>
           <p className="text-gray-500 mb-4">{slide.subtitle}</p>
@@ -86,13 +97,10 @@ const Section1 = () => {
             </div>
           )}
         </SwiperSlide>
-        ))
-       }
-       
-      
-       
-      </Swiper>
-    </div>
+      ))}
+    </Swiper>
+  </div>
+  
   )
 }
 

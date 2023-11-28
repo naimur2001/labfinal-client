@@ -7,7 +7,7 @@ import router from './Components/Routes/Routes.jsx'
 import AuthProvider from './Components/Main/AuthProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
- <div className='bg-gradient-to-br from-red-400 to-green-400'>
+ <div className='' >
    <AuthProvider>
    <React.StrictMode>
 <RouterProvider router={router}>

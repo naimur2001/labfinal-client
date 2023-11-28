@@ -37,7 +37,7 @@ const Section2 = () => {
     <div className='my-5'>
         <div className="my-5 text-center font-mono">
  
-        <h2 className="text-4xl font-extrabold mb-8">Vehicle And Fees</h2>
+        <h2 className="text-4xl font-extrabold mb-8 mt-14">Vehicle And Fees</h2>
 
       </div>
   <div className="grid grid-cols-1 lg:grid-cols-3  gap-4 mt-8 p-4">

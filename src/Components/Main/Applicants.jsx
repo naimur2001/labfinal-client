@@ -29,6 +29,7 @@ const {user}=useContext(AuthContext)
       }
     }, [user]);
     const {role}=Udata
+    console.log(role)
     const formatDate = (dateString) => {
       const date = new Date(dateString);
       return date.toLocaleDateString('en-US');
@@ -53,7 +54,7 @@ const {user}=useContext(AuthContext)
          </div>
       
          {user && role === 'admin' ? 
-              <div className='px-6 py-4'>
+    <div className='px-6 py-4'>
                 <Link to={`/viewdetail/${applicant._id}`}>
                   <div className='font-bold text-lg mb-2 cursor-pointer'>
                     <svg xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 0 512 512" fill='red'>
@@ -61,8 +62,8 @@ const {user}=useContext(AuthContext)
                     </svg>
                   </div>
                 </Link>
-              </div>
-             : ''}
+                </div>
+    : ''}
         
       </div>
     ))}
